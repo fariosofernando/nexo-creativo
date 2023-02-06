@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+// import 'package:flutter_web_plugins/url_strategy.dart' as url;
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'app_dashboard.dart';
 import 'app_instances.dart';
@@ -9,6 +10,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  // setUrlStrategy(PathUrlStrategy());
   const MyApp({super.key});
 
   @override
