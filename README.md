@@ -1,16 +1,7 @@
-# portfolio
+# Nexu Creativo
 
-A new Flutter project.
+Bem vindo ao repositorio do meu portfolio feito em Dart/Flutter...
 
-## Getting Started
+Enjoy!
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Possuo habilidades avançadas de desenvolvimento de aplicativos móveis. Sou especializado em criar experiências intuitivas e ricas para usuários móveis. Tenho experiência em desenvolvimento de aplicativos nativos, desenvolvimento de aplicativos híbridos, desenvolvimento web e programação.
