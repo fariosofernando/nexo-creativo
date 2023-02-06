@@ -43,24 +43,24 @@ class AppContactmePage extends StatelessWidget {
                       const SizedBox(height: 50.0),
                       AppCantactMedDatas(
                         icon: Icon(Icons.call_outlined, color: _setColorIndicator()),
-                        title: 'Call Me',
-                        subtitle: '999-777-666',
+                        title: 'Ligue Me',
+                        subtitle: '877-134-964',
                       ),
                       AppCantactMedDatas(
                         icon: Icon(Icons.email_outlined, color: _setColorIndicator()),
                         title: 'Email',
-                        subtitle: 'alexa@email.com',
+                        subtitle: 'farioso.f@gmail.com',
                       ),
                       AppCantactMedDatas(
                         icon: Icon(Icons.location_on_outlined, color: _setColorIndicator()),
                         title: 'Location',
-                        subtitle: 'Peru - Lima Av. Bolivar #123',
+                        subtitle: 'Maputo - Zimpeto. Magoanine C',
                       ),
                       const SizedBox(height: 50.0),
                       const TextField(
                         decoration: InputDecoration(
                           border: OutlineInputBorder(),
-                          hintText: 'Name',
+                          hintText: 'Nome',
                         ),
                       ),
                       const SizedBox(height: 22),
@@ -74,7 +74,7 @@ class AppContactmePage extends StatelessWidget {
                       const TextField(
                         decoration: InputDecoration(
                           border: OutlineInputBorder(),
-                          hintText: 'Project',
+                          hintText: 'Seu projeto',
                         ),
                       ),
                       const SizedBox(height: 22),
@@ -82,7 +82,7 @@ class AppContactmePage extends StatelessWidget {
                         maxLines: 10,
                         decoration: InputDecoration(
                           border: OutlineInputBorder(),
-                          hintText: 'Message',
+                          hintText: 'Descreva para mim o seu projeto',
                         ),
                       ),
                       const SizedBox(height: 22),
@@ -116,15 +116,15 @@ class AppContactmePage extends StatelessWidget {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: const [
-                          Text('Alexa', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 22)),
-                          Text('Frontend developer', style: TextStyle(fontWeight: FontWeight.normal)),
+                          Text('Farioso', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 22)),
+                          Text('Software developer', style: TextStyle(fontWeight: FontWeight.normal)),
                         ],
                       ),
                       // const Text('Services', style: TextStyle(fontWeight: FontWeight.normal)),
                       // const Text('Portfolio', style: TextStyle(fontWeight: FontWeight.normal)),
                       // const Text('Contactme', style: TextStyle(fontWeight: FontWeight.normal)),
                       Row(mainAxisAlignment: MainAxisAlignment.center, children: const [
-                        Text('@ Farioso Fernando. All right reserved', style: TextStyle(fontWeight: FontWeight.normal)),
+                        Text('@ Nexu Creativo. Todos os direitos reservados', style: TextStyle(fontWeight: FontWeight.normal, fontSize: 12.5)),
                       ]),
                     ],
                   ),

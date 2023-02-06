@@ -121,7 +121,7 @@ class _BottonBarDesktopLayoutState extends State<BottonBarDesktopLayout> {
           height: 49,
           padding: const EdgeInsets.only(left: 50.0, right: 50),
           child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-            const Text('Alexa', style: TextStyle(fontWeight: FontWeight.bold)),
+            const Text('Farioso', style: TextStyle(fontWeight: FontWeight.bold)),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -136,7 +136,7 @@ class _BottonBarDesktopLayoutState extends State<BottonBarDesktopLayout> {
                   ),
                   // const SizedBox(width: 8.0),
                   AppMenuDesktopItem(
-                    text: 'About',
+                    text: 'Sobre',
                     active: (AppInstances.instance.globalStore.currentPage == 1),
                     action: () {
                       // widget.pageClick(1);
@@ -154,7 +154,7 @@ class _BottonBarDesktopLayoutState extends State<BottonBarDesktopLayout> {
                   ),
                   AppMenuDesktopItem(
                     active: (AppInstances.instance.globalStore.currentPage == 3),
-                    text: 'Services',
+                    text: 'Serviços',
                     action: () {
                       // widget.pageClick(3);
                       AppAlerts.warnig(context);
@@ -170,7 +170,7 @@ class _BottonBarDesktopLayoutState extends State<BottonBarDesktopLayout> {
                   ),
                   AppMenuDesktopItem(
                     active: (AppInstances.instance.globalStore.currentPage == 5),
-                    text: 'Contact',
+                    text: 'Contato',
                     action: () {
                       // widget.pageClick(5);
                       AppAlerts.warnig(context);
@@ -219,7 +219,7 @@ class _BottonBarPhoneLayoutState extends State<BottonBarPhoneLayout> {
           height: 49,
           padding: const EdgeInsets.only(left: 22.0, right: 8.0),
           child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-            const Text('Alexa', style: TextStyle(fontWeight: FontWeight.bold)),
+            const Text('Farioso', style: TextStyle(fontWeight: FontWeight.bold)),
             SizedBox(
               width: 85.5,
               child: Row(
@@ -250,7 +250,7 @@ class _BottonBarPhoneLayoutState extends State<BottonBarPhoneLayout> {
                                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                         children: [
                                           AppMenuItem(
-                                            text: 'Menu',
+                                            text: 'Home',
                                             icon: const Icon(Icons.home_rounded),
                                             action: () {
                                               widget.pageClick(0);
@@ -259,7 +259,7 @@ class _BottonBarPhoneLayoutState extends State<BottonBarPhoneLayout> {
                                           ),
                                           // const SizedBox(width: 8.0),
                                           AppMenuItem(
-                                            text: 'About',
+                                            text: 'Sobre',
                                             icon: const Icon(Icons.account_circle_rounded),
                                             action: () {
                                               widget.pageClick(1);
@@ -280,7 +280,7 @@ class _BottonBarPhoneLayoutState extends State<BottonBarPhoneLayout> {
                                       const SizedBox(height: 22.0),
                                       Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
                                         AppMenuItem(
-                                          text: 'Services',
+                                          text: 'Serviços',
                                           icon: const Icon(Icons.design_services_rounded),
                                           action: () {
                                             widget.pageClick(3);
@@ -296,7 +296,7 @@ class _BottonBarPhoneLayoutState extends State<BottonBarPhoneLayout> {
                                           },
                                         ),
                                         AppMenuItem(
-                                          text: 'Contact',
+                                          text: 'Contato',
                                           icon: const Icon(Icons.send_rounded),
                                           action: () {
                                             widget.pageClick(5);

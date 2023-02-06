@@ -40,11 +40,11 @@ class _AppPortfolioPageState extends State<AppPortfolioPage> {
                       fontWeight: FontWeight.bold,
                     )),
                 const SizedBox(height: 1.5),
-                const Text('Most recentes works', style: TextStyle(fontSize: 12.5)),
+                const Text('Trabalhos mais recentes', style: TextStyle(fontSize: 12.5)),
                 const SizedBox(height: 50.0),
                 SizedBox(
                   width: widget._mediaSize.width,
-                  height: widget._mediaSize.height * .50,
+                  height: widget._mediaSize.height * .55,
                   child: Stack(
                     children: [
                       // the page view
@@ -55,9 +55,9 @@ class _AppPortfolioPageState extends State<AppPortfolioPage> {
                           AppInstances.instance.globalStore.page = page;
                         },
                         children: [
-                          CarrosselViewItem(mediaSize: widget._mediaSize, title: 'Modern Website', description: 'Website adaptable to all devices, with ui components and animated interactions.', asset: _assetNames[0]),
-                          CarrosselViewItem(mediaSize: widget._mediaSize, title: 'Brand Design', description: 'Website adaptable to all devices, with ui components and animated interactions.', asset: _assetNames[1]),
-                          CarrosselViewItem(mediaSize: widget._mediaSize, title: 'Online Store', description: 'Website adaptable to all devices, with ui components and animated interactions.', asset: _assetNames[2]),
+                          CarrosselViewItem(mediaSize: widget._mediaSize, title: 'Website Moderno', description: 'Site adaptável a todos os dispositivos, com componentes de interface do usuário e interações animadas.', asset: _assetNames[0]),
+                          CarrosselViewItem(mediaSize: widget._mediaSize, title: 'Brand Design', description: 'Trabalhos criativos e inovadores de design de marca para clientes de todos os setores.', asset: _assetNames[1]),
+                          CarrosselViewItem(mediaSize: widget._mediaSize, title: 'Loja Virtual', description: 'Especializado em lojas virtuais. Possui experiência em criação de sites responsivos, integração com plataformas de e-commerce, entre outros.', asset: _assetNames[2]),
                         ],
                       ),
                       Align(
@@ -86,9 +86,9 @@ class _AppPortfolioPageState extends State<AppPortfolioPage> {
                   child: Column(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
                     Column(
                       children: const [
-                        Text('You hava a new project', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: Colors.white)),
+                        Text('Você tem um novo projeto', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: Colors.white)),
                         Text(
-                          'Contact me now and get a 30% discount an your new project',
+                          'Contacte-me agora e obtenha um desconto de 30% no seu novo projeto',
                           textAlign: TextAlign.center,
                           style: TextStyle(color: Colors.white),
                         ),
@@ -103,7 +103,7 @@ class _AppPortfolioPageState extends State<AppPortfolioPage> {
                           ),
                           onPressed: () {},
                           child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: const [
-                            Text('Contact Me'),
+                            Text('Contate Me'),
                             SizedBox(width: 8.0),
                             Icon(Icons.send_rounded, color: Color(0xFFE1C648)),
                           ])),
@@ -120,13 +120,13 @@ class _AppPortfolioPageState extends State<AppPortfolioPage> {
                   ]),
                 ),
                 const SizedBox(height: 50.0),
-                const Text('Testimonial',
+                const Text('Depoimento',
                     style: TextStyle(
                       fontSize: 22,
                       fontWeight: FontWeight.bold,
                     )),
                 const SizedBox(height: 1.5),
-                const Text('My client soying', style: TextStyle(fontSize: 12.5)),
+                const Text('O que meus clientes dizem', style: TextStyle(fontSize: 12.5)),
                 const SizedBox(height: 50.0),
                 SizedBox(
                   height: 150,
@@ -145,21 +145,21 @@ class _AppPortfolioPageState extends State<AppPortfolioPage> {
                           children: [
                             AppTestiomonialClient(
                               mediaSize: widget._mediaSize,
-                              clientComentary: "I get a good impression, i carry out my project with all the possible quality and attention and support 24 hours a day.",
+                              clientComentary: "Ouh! Eu amei o trabalho dele. Eu sou fã de cores, e... assim, eu amei a forma como ele usou o degrade no meu projeto. Simplesmente incrivel!",
                               picture: 'assets/img/testimonial1.jpg',
                               clientName: 'Sara Smith',
                             ),
                             AppTestiomonialClient(
                               mediaSize: widget._mediaSize,
-                              clientComentary: "I get a good impression, i carry out my project with all the possible quality and attention and support 24 hours a day.",
+                              clientComentary: "Tenho uma boa impressão, realizou meu projeto com toda a qualidade possível e atenção e suporte 24 horas por dia.",
                               picture: 'assets/img/testimonial2.jpg',
-                              clientName: 'Sara Smith',
+                              clientName: 'Keven Maidess',
                             ),
                             AppTestiomonialClient(
                               mediaSize: widget._mediaSize,
-                              clientComentary: "I get a good impression, i carry out my project with all the possible quality and attention and support 24 hours a day.",
+                              clientComentary: "Há há há... meu grande amigo. Depois de ter feito um projeto para mim, não desgrudo mais dele. O trabalho dele é simplesmente fantástico.",
                               picture: 'assets/img/testimonial3.jpg',
-                              clientName: 'Sara Smith',
+                              clientName: 'Gerson Savele',
                             ),
                           ],
                         ),

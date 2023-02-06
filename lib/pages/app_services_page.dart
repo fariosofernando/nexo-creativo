@@ -18,34 +18,32 @@ class AppServicesPage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: const [
-              Text('Services',
+              Text('Serviços',
                   style: TextStyle(
                     fontSize: 22,
                     fontWeight: FontWeight.bold,
                   )),
               SizedBox(height: 1.5),
-              Text('What i after', style: TextStyle(fontSize: 12.5)),
+              Text('O que eu ofereço', style: TextStyle(fontSize: 12.5)),
               SizedBox(height: 50.0),
               AppCard(
                 service: 'Ui/Ux\nDesigner',
                 icon: Icon(Icons.space_dashboard_outlined),
                 serviceName: 'Ui/Ux design',
                 servicesList: [
-                  'I develop the user interface',
-                  'Web page development',
-                  'I create ux element interactions',
-                  'I position your company brand',
+                  'Eu desenvolvo a interface do usuário',
+                  'Eu crio interações de elemento ux',
+                  'Posiciono a marca da sua empresa',
                 ],
               ),
               AppCard(
-                service: 'Frontend\nDeveloper',
+                service: 'Software\nDeveloper',
                 icon: Icon(Icons.code_rounded),
                 serviceName: 'Frontend developer',
                 servicesList: [
-                  'I develop the user interface',
-                  'Web page development',
-                  'I create ux element interactions',
-                  'I position your company brand',
+                  'Desenvolvimento de página da Web',
+                  'Desenvolvimento de aplicativo mobile',
+                  'Desenvolvimento de aplicativo desktop',
                 ],
               ),
               AppCard(
@@ -53,10 +51,8 @@ class AppServicesPage extends StatelessWidget {
                 icon: Icon(Icons.brush_outlined),
                 serviceName: 'Branding designer',
                 servicesList: [
-                  'I develop the user interface',
-                  'Web page development',
-                  'I create ux element interactions',
-                  'I position your company brand',
+                  'Crio e conceitualizo sua marca',
+                  'Desenvolvo sua identidade visual',
                 ],
               ),
             ],

@@ -29,13 +29,13 @@ class AppPhoneLayout extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        const Text('About',
+        const Text('Sobre',
             style: TextStyle(
               fontSize: 22,
               fontWeight: FontWeight.bold,
             )),
         const SizedBox(height: 1.5),
-        const Text('My Introduction', style: TextStyle(fontSize: 12.5)),
+        const Text('A minha introdução', style: TextStyle(fontSize: 12.5)),
         const SizedBox(height: 50.0),
         SizedBox(
             height: 180,
@@ -46,7 +46,7 @@ class AppPhoneLayout extends StatelessWidget {
             )),
         const SizedBox(height: 16.0),
         const Text(
-          'Web developer, with extensive knowledge and years of experience, working in web technologles and Ui / Ux design, delivering quality work.',
+          'Desenvolvedor de software, com amplo conhecimento e anos de experiência, atuando em tecnologias mobile e design Ui/Ux, entregando um trabalho de qualidade.',
           style: TextStyle(fontSize: 12.5),
           textAlign: TextAlign.center,
         ),
@@ -57,14 +57,14 @@ class AppPhoneLayout extends StatelessWidget {
             SizedBox(
               child: Column(children: const [
                 Text(
-                  '08+',
+                  '10+',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 16,
                   ),
                 ),
                 Text(
-                  'Years\nexperience',
+                  'Anos\nexperiência',
                   textAlign: TextAlign.center,
                   style: TextStyle(fontSize: 12.5),
                 ),
@@ -80,7 +80,7 @@ class AppPhoneLayout extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  'Componsed\nprojects',
+                  'Projetos\ncompostos',
                   textAlign: TextAlign.center,
                   style: TextStyle(fontSize: 12.5),
                 ),
@@ -89,14 +89,14 @@ class AppPhoneLayout extends StatelessWidget {
             SizedBox(
               child: Column(children: const [
                 Text(
-                  '05+',
+                  '03+',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 16,
                   ),
                 ),
                 Text(
-                  'Components\nworked',
+                  'Empresas\ntrabalhadas',
                   textAlign: TextAlign.center,
                   style: TextStyle(fontSize: 12.5),
                 ),
@@ -108,9 +108,9 @@ class AppPhoneLayout extends StatelessWidget {
         FilledButton(
             onPressed: () {},
             child: SizedBox(
-              width: 135,
+              width: 145,
               child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: const [
-                Text('Download CV'),
+                Text('Baixar currículo'),
                 SizedBox(width: 8.0),
                 Icon(Icons.download_rounded),
               ]),
@@ -130,13 +130,13 @@ class AppTableLayout extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        const Text('About',
+        const Text('Sobre',
             style: TextStyle(
               fontSize: 22,
               fontWeight: FontWeight.bold,
             )),
         const SizedBox(height: 1.5),
-        const Text('My Introduction', style: TextStyle(fontSize: 12.5)),
+        const Text('A minha introdução', style: TextStyle(fontSize: 12.5)),
         const SizedBox(height: 50.0),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -153,7 +153,7 @@ class AppTableLayout extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Text(
-                  'Web developer, with extensive\nknowledge and years of\nexperience, working in web\ntechnologles\nand Ui / Ux design,\ndelivering quality work.',
+                  'Desenvolvedor de software, com amplo\nconhecimento e anos de\nexperiência, atuando em\ntecnologias\ne Web e Ui/Ux design,\nentregando um trabalho de qualidade. extensive\nknowledge and years of\nexperience, working in web\ntechnologles\nand Ui / Ux design,\ndelivering quality work.',
                   style: TextStyle(fontSize: 12.5),
                   textAlign: TextAlign.center,
                 ),
@@ -164,7 +164,7 @@ class AppTableLayout extends StatelessWidget {
                     SizedBox(
                       child: Column(children: const [
                         Text(
-                          '08+',
+                          '10+',
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 16,
@@ -187,7 +187,7 @@ class AppTableLayout extends StatelessWidget {
                           ),
                         ),
                         Text(
-                          'Componsed\nprojects',
+                          'Projetos\ncompostos',
                           textAlign: TextAlign.center,
                           style: TextStyle(fontSize: 12.5),
                         ),
@@ -196,14 +196,14 @@ class AppTableLayout extends StatelessWidget {
                     SizedBox(
                       child: Column(children: const [
                         Text(
-                          '05+',
+                          '03+',
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 16,
                           ),
                         ),
                         Text(
-                          'Components\nworked',
+                          'Empresas\ntrabalhadas',
                           textAlign: TextAlign.center,
                           style: TextStyle(fontSize: 12.5),
                         ),
@@ -215,9 +215,9 @@ class AppTableLayout extends StatelessWidget {
                 FilledButton(
                     onPressed: () {},
                     child: SizedBox(
-                      width: 135,
+                      width: 145,
                       child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: const [
-                        Text('Download CV'),
+                        Text('Baixar currículo'),
                         SizedBox(width: 8.0),
                         Icon(Icons.download_rounded),
                       ]),

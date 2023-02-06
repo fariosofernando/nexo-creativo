@@ -42,7 +42,7 @@ class AppCard extends StatelessWidget {
               TextButton(
                 child: SizedBox(
                     child: Row(children: const [
-                  Text('View More'),
+                  Text('Ver mais'),
                   Icon(Icons.arrow_forward_rounded),
                 ])),
                 onPressed: () {

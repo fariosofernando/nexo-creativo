@@ -79,19 +79,19 @@ class PhoneLayout extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: const [
-              Text("Hi, I'am Alexa",
+              Text("Olá, eu sou a Farioso",
                   style: TextStyle(
                     fontSize: 22,
                     fontWeight: FontWeight.bold,
                   )),
               SizedBox(height: 5.0),
-              Text('Frondend Developer',
+              Text('Software Developer',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                   )),
               SizedBox(height: 8.0),
               Text(
-                'High level experience in web design and development knowledge, producing quality work.',
+                'Experiência de alto nível em Ui/Ux design e conhecimento em desenvolvimento de software, produzindo trabalhos de qualidade.',
                 style: TextStyle(fontSize: 12.5),
               ),
             ],
@@ -105,7 +105,7 @@ class PhoneLayout extends StatelessWidget {
               child: FilledButton(
                   onPressed: () {},
                   child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: const [
-                    Text('Contact Me'),
+                    Text('Contate Me'),
                     SizedBox(width: 8.0),
                     Icon(Icons.send_rounded),
                   ])),
@@ -164,19 +164,19 @@ class DesktopLayout extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Text("Hi, I'am Alexa",
+                      const Text("Olá, eu sou a Farioso",
                           style: TextStyle(
                             fontSize: 38,
                             fontWeight: FontWeight.bold,
                           )),
                       const SizedBox(height: 5.0),
-                      const Text('Frondend Developer',
+                      const Text('Software Developer',
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                           )),
                       const SizedBox(height: 8.0),
                       const Text(
-                        'High level experience in web design and\ndevelopment knowledge, producing\nquality work.',
+                        'Experiência de alto nível em Ui/Ux design e conhecimento\n em desenvolvimento de software, produzindo\ntrabalhos de qualidade.',
                         style: TextStyle(fontSize: 12.5),
                       ),
                       const SizedBox(height: 22.0),
@@ -185,7 +185,7 @@ class DesktopLayout extends StatelessWidget {
                         child: FilledButton(
                             onPressed: () {},
                             child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: const [
-                              Text('Contact Me'),
+                              Text('Contate Me'),
                               SizedBox(width: 8.0),
                               Icon(Icons.send_rounded),
                             ])),
@@ -197,7 +197,7 @@ class DesktopLayout extends StatelessWidget {
                           children: const [
                             Icon(Icons.mouse_outlined),
                             SizedBox(width: 8.0),
-                            Text('Scroll down '),
+                            Text('Role para baixo '),
                             Icon(Icons.arrow_downward, size: 12),
                           ],
                         ),

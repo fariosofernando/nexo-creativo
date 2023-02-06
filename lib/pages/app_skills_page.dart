@@ -32,92 +32,122 @@ class _AppSkillsPageState extends State<AppSkillsPage> {
                     fontWeight: FontWeight.bold,
                   )),
               SizedBox(height: 1.5),
-              Text('My Technical Level', style: TextStyle(fontSize: 12.5)),
+              Text('Meu nível técnico', style: TextStyle(fontSize: 12.5)),
               SizedBox(height: 50.0),
               AppSkillTile(
-                tech: 'Frontend developer',
-                description: 'More then 4 years',
+                tech: 'Mobile developer',
+                description: 'Mais de 10 anos',
                 icon: Icon(Icons.data_object),
                 items: [
                   AppSkillItem(
-                    skill: 'HTML',
-                    percentage: 0.9,
-                    percentageInString: '90',
+                    skill: 'Flutter',
+                    percentage: 0.95,
+                    percentageInString: '95',
                   ),
                   AppSkillItem(
-                    skill: 'CSS',
-                    percentage: 0.8,
-                    percentageInString: '80',
+                    skill: 'Android',
+                    percentage: 0.55,
+                    percentageInString: '55',
                   ),
                   AppSkillItem(
-                    skill: 'JavaScript',
-                    percentage: 0.6,
-                    percentageInString: '60',
+                    skill: 'Kivy',
+                    percentage: 0.96,
+                    percentageInString: '96',
                   ),
                   AppSkillItem(
-                    skill: 'React',
-                    percentage: 0.85,
-                    percentageInString: '85',
+                    skill: 'React Native',
+                    percentage: 0.25,
+                    percentageInString: '25',
                   ),
                 ],
               ),
               AppSkillTile(
                 tech: 'Backend developer',
-                description: 'More then 2 years',
+                description: 'Mais de 10 anos',
                 icon: Icon(Icons.terminal_rounded),
                 items: [
                   AppSkillItem(
-                    skill: 'PHP',
-                    percentage: 0.8,
-                    percentageInString: '80',
-                  ),
-                  AppSkillItem(
-                    skill: 'Node Js',
-                    percentage: 0.7,
-                    percentageInString: '70',
-                  ),
-                  AppSkillItem(
-                    skill: 'Firebase',
-                    percentage: 0.90,
-                    percentageInString: '90',
+                    skill: 'Kotlin',
+                    percentage: 0.65,
+                    percentageInString: '65',
                   ),
                   AppSkillItem(
                     skill: 'Python',
+                    percentage: 0.95,
+                    percentageInString: '95',
+                  ),
+                  AppSkillItem(
+                    skill: 'Objective-C',
                     percentage: 0.55,
                     percentageInString: '55',
+                  ),
+                  AppSkillItem(
+                    skill: 'Dart Lang',
+                    percentage: 0.95,
+                    percentageInString: '95',
+                  ),
+                  AppSkillItem(
+                    skill: 'JavaScript',
+                    percentage: 0.55,
+                    percentageInString: '55',
+                  ),
+                  AppSkillItem(
+                    skill: 'C++',
+                    percentage: 0.55,
+                    percentageInString: '55',
+                  ),
+                  AppSkillItem(
+                    skill: 'C',
+                    percentage: 0.55,
+                    percentageInString: '55',
+                  ),
+                  AppSkillItem(
+                    skill: 'Cobol',
+                    percentage: 0.35,
+                    percentageInString: '35',
+                  ),
+                  AppSkillItem(
+                    skill: 'Firebase',
+                    percentage: 0.60,
+                    percentageInString: '60',
+                  ),
+                  AppSkillItem(
+                    skill: 'MySQL',
+                    percentage: 0.61,
+                    percentageInString: '61',
                   ),
                 ],
               ),
               AppSkillTile(
                 tech: 'Designer',
-                description: 'More then 2 years',
+                description: 'Mais de 6 anos',
                 icon: Icon(Icons.design_services_rounded),
                 items: [
                   AppSkillItem(
                     skill: 'Figma',
-                    percentage: 0.9,
-                    percentageInString: '90',
+                    percentage: 0.15,
+                    percentageInString: '15',
                   ),
                   AppSkillItem(
-                    skill: 'Sketch',
-                    percentage: 0.85,
-                    percentageInString: '85',
+                    skill: 'Inkscape',
+                    percentage: 0.98,
+                    percentageInString: '98',
                   ),
                   AppSkillItem(
                     skill: 'Photoshop',
-                    percentage: 0.85,
-                    percentageInString: '85',
+                    percentage: 0.55,
+                    percentageInString: '55',
                   )
                 ],
               ),
               SizedBox(height: 22.0),
-              Text('Qualification',
+              Text('Qualificação',
                   style: TextStyle(
                     fontSize: 22,
                     fontWeight: FontWeight.bold,
                   )),
               SizedBox(height: 1.5),
-              Text('My personal journey', style: TextStyle(fontSize: 12.5)),
+              Text('Minha jornada pessoal', style: TextStyle(fontSize: 12.5)),
               SizedBox(height: 22.0),
               WorkTile(),
             ],
@@ -140,7 +170,7 @@ class WorkTile extends StatelessWidget {
       return Column(children: [
         const Icon(Icons.business_center),
         const SizedBox(width: 5.0),
-        const Text('Work'),
+        const Text('Trabalho'),
         const SizedBox(height: 22),
         Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, crossAxisAlignment: CrossAxisAlignment.start, children: [
           Column(
@@ -152,14 +182,14 @@ class WorkTile extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: const [
                     Text(
-                      'Software\nEngineer',
+                      'Automation\nEngineer',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 14,
                       ),
                     ),
                     Text(
-                      'Microsoft - Peru',
+                      'PBX - Maputo',
                       style: TextStyle(
                         fontWeight: FontWeight.normal,
                         color: Colors.grey,
@@ -167,7 +197,7 @@ class WorkTile extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      '2016 - 2018',
+                      '2023 - 2023',
                       style: TextStyle(
                         fontWeight: FontWeight.normal,
                         color: Colors.grey,
@@ -186,14 +216,14 @@ class WorkTile extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: const [
                     Text(
-                      'UI\nDesigner',
+                      'Software\nEngineer',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 14,
                       ),
                     ),
                     Text(
-                      'Figma - Spain',
+                      'Só Saúde - Maputo',
                       style: TextStyle(
                         fontWeight: FontWeight.normal,
                         color: Colors.grey,
@@ -201,7 +231,7 @@ class WorkTile extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      '2016 - 2018',
+                      '2021 - 2023',
                       style: TextStyle(
                         fontWeight: FontWeight.normal,
                         color: Colors.grey,
@@ -265,14 +295,14 @@ class WorkTile extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: const [
                     Text(
-                      'Frontend\nDeveloper',
+                      'Software\nDeveloper',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 14,
                       ),
                     ),
                     Text(
-                      'Microsoft - Peru',
+                      'Cuppen - Maputo',
                       style: TextStyle(
                         fontWeight: FontWeight.normal,
                         color: Colors.grey,
@@ -280,7 +310,7 @@ class WorkTile extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      '2016 - 2018',
+                      '2019',
                       style: TextStyle(
                         fontWeight: FontWeight.normal,
                         color: Colors.grey,
