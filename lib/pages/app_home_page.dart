@@ -83,7 +83,7 @@ class PhoneLayout extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: const [
-                Text("Olá, eu sou a Farioso",
+                Text("Olá, eu sou o Farioso",
                     style: TextStyle(
                       fontSize: 22,
                       fontWeight: FontWeight.bold,
@@ -170,7 +170,7 @@ class DesktopLayout extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const Text("Olá, eu sou a Farioso",
+                        const Text("Olá, eu sou o Farioso",
                             style: TextStyle(
                               fontSize: 38,
                               fontWeight: FontWeight.bold,
