@@ -3,7 +3,7 @@ import 'package:flutter_mobx/flutter_mobx.dart';
 
 import '../app_instances.dart';
 
-class AppContactmePage extends StatelessWidget {
+class AppContactmePage extends StatefulWidget {
   const AppContactmePage({
     super.key,
     required Size mediaSize,
@@ -11,6 +11,11 @@ class AppContactmePage extends StatelessWidget {
 
   final Size _mediaSize;
 
+  @override
+  State<AppContactmePage> createState() => _AppContactmePageState();
+}
+
+class _AppContactmePageState extends State<AppContactmePage> {
   Color _setColorIndicator() {
     if (AppInstances.instance.globalStore.darkModeActivated) {
       return const Color(0xFFE1C648);
@@ -25,7 +30,7 @@ class AppContactmePage extends StatelessWidget {
       return SizedBox(
         child: SingleChildScrollView(
           child: Padding(
-            padding: EdgeInsets.only(top: _mediaSize.height * .15, bottom: 50),
+            padding: EdgeInsets.only(top: widget._mediaSize.height * .15, bottom: 50),
             child: Column(
               children: [
                 Padding(
@@ -33,13 +38,13 @@ class AppContactmePage extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Text('Contact Med',
+                      const Text('Contate me',
                           style: TextStyle(
                             fontSize: 22,
                             fontWeight: FontWeight.bold,
                           )),
                       const SizedBox(height: 1.5),
-                      const Text('Get in touch', style: TextStyle(fontSize: 12.5)),
+                      const Text('Pegue um toque', style: TextStyle(fontSize: 12.5)),
                       const SizedBox(height: 50.0),
                       AppCantactMedDatas(
                         icon: Icon(Icons.call_outlined, color: _setColorIndicator()),
@@ -53,7 +58,7 @@ class AppContactmePage extends StatelessWidget {
                       ),
                       AppCantactMedDatas(
                         icon: Icon(Icons.location_on_outlined, color: _setColorIndicator()),
-                        title: 'Location',
+                        title: 'Localização',
                         subtitle: 'Maputo - Zimpeto. Magoanine C',
                       ),
                       const SizedBox(height: 50.0),
@@ -106,7 +111,7 @@ class AppContactmePage extends StatelessWidget {
                 const SizedBox(height: 70),
                 Container(
                   height: 185,
-                  width: _mediaSize.width,
+                  width: widget._mediaSize.width,
                   padding: const EdgeInsets.all(22.0),
                   color: const Color(0xFFE1C648),
                   child: Column(

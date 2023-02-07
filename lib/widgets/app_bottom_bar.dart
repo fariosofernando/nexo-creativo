@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_mobx/flutter_mobx.dart';
 
 import '../app_alert_open_your_phone.dart';
 import '../app_instances.dart';
@@ -113,85 +114,85 @@ class BottonBarDesktopLayout extends StatefulWidget {
 class _BottonBarDesktopLayoutState extends State<BottonBarDesktopLayout> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: AppInstances.instance.globalStore.darkModeActivated ? const Color(0xFF1D1B16) : const Color(0xFFFFFBFF),
-      height: 50,
-      child: Column(children: [
-        Container(
-          height: 49,
-          padding: const EdgeInsets.only(left: 50.0, right: 50),
-          child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-            const Text('Farioso', style: TextStyle(fontWeight: FontWeight.bold)),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                  AppMenuDesktopItem(
-                    text: 'Home',
-                    active: (AppInstances.instance.globalStore.currentPage == 0),
-                    action: () {
-                      // widget.pageClick(0);
-                      AppAlerts.warnig(context);
-                    },
-                  ),
-                  // const SizedBox(width: 8.0),
-                  AppMenuDesktopItem(
-                    text: 'Sobre',
-                    active: (AppInstances.instance.globalStore.currentPage == 1),
-                    action: () {
-                      // widget.pageClick(1);
-                      AppAlerts.warnig(context);
-                    },
-                  ),
+    return Observer(builder: (_) {
+      return Container(
+        color: AppInstances.instance.globalStore.darkModeActivated ? const Color(0xFF1D1B16) : const Color(0xFFFFFBFF),
+        height: 50,
+        child: Column(children: [
+          Container(
+            height: 49,
+            padding: const EdgeInsets.only(left: 50.0, right: 50),
+            child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+              const Text('Farioso', style: TextStyle(fontWeight: FontWeight.bold)),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+                    AppMenuDesktopItem(
+                      text: 'Home',
+                      active: (AppInstances.instance.globalStore.currentPage == 0),
+                      action: () {
+                        // widget.pageClick(0);
+                        AppAlerts.warnig(context);
+                      },
+                    ),
+                    // const SizedBox(width: 8.0),
+                    AppMenuDesktopItem(
+                      text: 'Sobre',
+                      active: (AppInstances.instance.globalStore.currentPage == 1),
+                      action: () {
+                        // widget.pageClick(1);
+                        AppAlerts.warnig(context);
+                      },
+                    ),
 
-                  AppMenuDesktopItem(
-                    text: 'Skills',
-                    active: (AppInstances.instance.globalStore.currentPage == 2),
-                    action: () {
-                      // widget.pageClick(2);
-                      AppAlerts.warnig(context);
-                    },
-                  ),
-                  AppMenuDesktopItem(
-                    active: (AppInstances.instance.globalStore.currentPage == 3),
-                    text: 'Serviços',
-                    action: () {
-                      // widget.pageClick(3);
-                      AppAlerts.warnig(context);
-                    },
-                  ),
-                  AppMenuDesktopItem(
-                    active: (AppInstances.instance.globalStore.currentPage == 4),
-                    text: 'Portfolio',
-                    action: () {
-                      // widget.pageClick(4);
-                      AppAlerts.warnig(context);
-                    },
-                  ),
-                  AppMenuDesktopItem(
-                    active: (AppInstances.instance.globalStore.currentPage == 5),
-                    text: 'Contato',
-                    action: () {
-                      // widget.pageClick(5);
-                      AppAlerts.warnig(context);
-                    },
-                  ),
-                  IconButton(
-                    onPressed: () {
-                      setState(() {
+                    AppMenuDesktopItem(
+                      text: 'Skills',
+                      active: (AppInstances.instance.globalStore.currentPage == 2),
+                      action: () {
+                        // widget.pageClick(2);
+                        AppAlerts.warnig(context);
+                      },
+                    ),
+                    AppMenuDesktopItem(
+                      active: (AppInstances.instance.globalStore.currentPage == 3),
+                      text: 'Serviços',
+                      action: () {
+                        // widget.pageClick(3);
+                        AppAlerts.warnig(context);
+                      },
+                    ),
+                    AppMenuDesktopItem(
+                      active: (AppInstances.instance.globalStore.currentPage == 4),
+                      text: 'Portfolio',
+                      action: () {
+                        // widget.pageClick(4);
+                        AppAlerts.warnig(context);
+                      },
+                    ),
+                    AppMenuDesktopItem(
+                      active: (AppInstances.instance.globalStore.currentPage == 5),
+                      text: 'Contato',
+                      action: () {
+                        // widget.pageClick(5);
+                        AppAlerts.warnig(context);
+                      },
+                    ),
+                    IconButton(
+                      onPressed: () {
                         AppInstances.instance.globalStore.changeActualTheme();
-                      });
-                    },
-                    icon: Icon(AppInstances.instance.globalStore.darkModeActivated ? Icons.light_mode_rounded : Icons.dark_mode_outlined),
-                  ),
-                ]),
-              ],
-            ),
-          ]),
-        ),
-        Divider(color: Colors.grey.withOpacity(.4), height: .25),
-      ]),
-    );
+                      },
+                      icon: Icon(AppInstances.instance.globalStore.darkModeActivated ? Icons.light_mode_rounded : Icons.dark_mode_outlined),
+                    ),
+                  ]),
+                ],
+              ),
+            ]),
+          ),
+          Divider(color: Colors.grey.withOpacity(.4), height: .25),
+        ]),
+      );
+    });
   }
 }
 

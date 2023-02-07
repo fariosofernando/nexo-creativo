@@ -79,7 +79,7 @@ class _AppPortfolioPageState extends State<AppPortfolioPage> {
                 AppMarketPoints(controller: _pageController, storeController: AppInstances.instance.globalStore.page),
                 const SizedBox(height: 45.0),
                 Container(
-                  height: widget._mediaSize.height * .60,
+                  height: widget._mediaSize.height * .65,
                   width: widget._mediaSize.width,
                   color: const Color(0xFFE1C648),
                   padding: const EdgeInsets.only(left: 22, top: 22, right: 22),
@@ -129,7 +129,7 @@ class _AppPortfolioPageState extends State<AppPortfolioPage> {
                 const Text('O que meus clientes dizem', style: TextStyle(fontSize: 12.5)),
                 const SizedBox(height: 50.0),
                 SizedBox(
-                  height: 150,
+                  height: 170,
                   width: widget._mediaSize.width,
                   child: Stack(
                     children: [

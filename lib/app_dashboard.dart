@@ -27,72 +27,72 @@ class _AppDashboardState extends State<AppDashboard> {
   Widget build(BuildContext context) {
     Size mediaSize = MediaQuery.of(context).size;
 
-    return Stack(children: [
-      Align(
-        alignment: Alignment.center,
-        child: PageView(
-          onPageChanged: (page) {
-            AppInstances.instance.globalStore.currentPage = page;
-          },
-          controller: _pageController,
-          scrollDirection: Axis.vertical,
-          // pageSnapping: false,
-          children: (mediaSize.width > 780)
-              ? [
-                  AppHomePage(
-                    mediaSize: mediaSize,
-                  ),
-                ]
-              : [
-                  AppHomePage(
-                    mediaSize: mediaSize,
-                  ),
-                  AppAboutPage(
-                    mediaSize: mediaSize,
-                  ),
-                  AppSkillsPage(
-                    mediaSize: mediaSize,
-                  ),
-                  AppServicesPage(
-                    mediaSize: mediaSize,
-                  ),
-                  AppPortfolioPage(
-                    mediaSize: mediaSize,
-                  ),
-                  AppContactmePage(
-                    mediaSize: mediaSize,
-                  ),
-                ],
+    return Observer(builder: (context) {
+      return Stack(children: [
+        Align(
+          alignment: Alignment.center,
+          child: PageView(
+            onPageChanged: (page) {
+              AppInstances.instance.globalStore.currentPage = page;
+            },
+            controller: _pageController,
+            scrollDirection: Axis.vertical,
+            // pageSnapping: false,
+            children: (mediaSize.width > 780)
+                ? [
+                    AppHomePage(
+                      mediaSize: mediaSize,
+                    ),
+                  ]
+                : [
+                    AppHomePage(
+                      mediaSize: mediaSize,
+                    ),
+                    AppAboutPage(
+                      mediaSize: mediaSize,
+                    ),
+                    AppSkillsPage(
+                      mediaSize: mediaSize,
+                    ),
+                    AppServicesPage(
+                      mediaSize: mediaSize,
+                    ),
+                    AppPortfolioPage(
+                      mediaSize: mediaSize,
+                    ),
+                    AppContactmePage(
+                      mediaSize: mediaSize,
+                    ),
+                  ],
+          ),
         ),
-      ),
-      Align(
-        alignment: (mediaSize.width >= 800.0) ? Alignment.topCenter : Alignment.bottomCenter,
-        child: AppBottonBar((page) {
-          _pageController.animateToPage(page, duration: const Duration(milliseconds: 1200), curve: Curves.ease);
-        }),
-      ),
-      Visibility(
-        visible: (mediaSize.width >= 780),
-        child: Align(
-          alignment: Alignment.bottomCenter,
-          child: Container(
-            width: mediaSize.width,
-            alignment: Alignment.centerLeft,
-            height: 35,
-            color: const Color(0xFFE1C648),
-            child: Row(
-              children: const [
-                SizedBox(width: 22.0),
-                Icon(Icons.warning_amber_outlined),
-                SizedBox(width: 8.0),
-                Text('Acessa o website pelo seu celular para navegar. Não use um tablet para isso.', style: TextStyle(fontSize: 12.5)),
-              ],
+        Align(
+          alignment: (mediaSize.width >= 800.0) ? Alignment.topCenter : Alignment.bottomCenter,
+          child: AppBottonBar((page) {
+            _pageController.animateToPage(page, duration: const Duration(milliseconds: 1200), curve: Curves.ease);
+          }),
+        ),
+        Visibility(
+          visible: (mediaSize.width >= 780),
+          child: Align(
+            alignment: Alignment.bottomCenter,
+            child: Container(
+              width: mediaSize.width,
+              alignment: Alignment.centerLeft,
+              height: 35,
+              color: const Color(0xFFE1C648),
+              child: Row(
+                children: const [
+                  SizedBox(width: 22.0),
+                  Icon(Icons.warning_amber_outlined),
+                  SizedBox(width: 8.0),
+                  Text('Acessa o website pelo seu celular para navegar. Não use um tablet para isso.', style: TextStyle(fontSize: 12.5)),
+                ],
+              ),
             ),
           ),
         ),
-      ),
-      Observer(builder: (_) {
-        return Visibility(
+        Visibility(
           visible: (AppInstances.instance.globalStore.currentPage != 0),
           child: Align(
             alignment: Alignment.bottomRight,
@@ -105,8 +105,8 @@ class _AppDashboardState extends State<AppDashboard> {
                   child: const Icon(Icons.arrow_upward_rounded)),
             ),
           ),
-        );
-      }),
-    ]);
+        ),
+      ]);
+    });
   }
 }

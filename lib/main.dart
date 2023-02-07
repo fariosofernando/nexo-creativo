@@ -10,25 +10,30 @@ void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    debugInvertOversizedImages = false;
+  State<MyApp> createState() => _MyAppState();
+}
 
-    return MaterialApp(
-      title: 'Portfolio',
-      debugShowCheckedModeBanner: false,
-      theme: (AppInstances.instance.globalStore.darkModeActivated == false) ? ThemeData(useMaterial3: true, colorScheme: lightColorScheme) : null,
-      darkTheme: (AppInstances.instance.globalStore.darkModeActivated == true) ? ThemeData(useMaterial3: true, colorScheme: darkColorScheme) : null,
-      home: Scaffold(
-        body: Builder(builder: (context) {
-          return Observer(builder: (_) {
-            return const AppDashboard(title: 'My Portifolio Dashboard Page');
-          });
-        }),
-      ),
-    );
+class _MyAppState extends State<MyApp> {
+  final String title = 'My Portifolio Dashboard Page';
+
+  @override
+  Widget build(BuildContext context) {
+    // debugInvertOversizedImages = false;
+
+    return Observer(builder: (_) {
+      return MaterialApp(
+        title: 'Portfolio',
+        debugShowCheckedModeBanner: false,
+        theme: (AppInstances.instance.globalStore.darkModeActivated == false) ? ThemeData(useMaterial3: true, colorScheme: lightColorScheme) : null,
+        darkTheme: (AppInstances.instance.globalStore.darkModeActivated == true) ? ThemeData(useMaterial3: true, colorScheme: darkColorScheme) : null,
+        home: Scaffold(
+          body: AppDashboard(title: title),
+        ),
+      );
+    });
   }
 }
