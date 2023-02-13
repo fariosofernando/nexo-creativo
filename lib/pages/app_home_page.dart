@@ -116,7 +116,7 @@ class PhoneLayout extends StatelessWidget {
                   )),
               SizedBox(height: 8.0),
               Text(
-                'Experiência de alto nível em Ui/Ux design e conhecimento em desenvolvimento de software, produzindo trabalhos de qualidade.',
+                'Experiência de alto nível em desenvolvimento de software e no conhecimento em Ui/Ux design, produzindo trabalhos de qualidade.',
                 style: TextStyle(fontSize: 12.5),
               ),
             ],

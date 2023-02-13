@@ -46,7 +46,7 @@ class AppPhoneLayout extends StatelessWidget {
             height: 180,
             width: 180,
             child: ClipRRect(
-              borderRadius: BorderRadius.circular(10.0),
+              borderRadius: BorderRadius.circular(22.0),
               child: const Image(image: AssetImage('assets/img/about.jpg')),
             )),
         const SizedBox(height: 16.0),
@@ -69,7 +69,7 @@ class AppPhoneLayout extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  'Anos\nexperiência',
+                  'Anos de\nexperiência',
                   textAlign: TextAlign.center,
                   style: TextStyle(fontSize: 12.5),
                 ),
@@ -150,7 +150,7 @@ class AppTableLayout extends StatelessWidget {
                 height: 180,
                 width: 180,
                 child: ClipRRect(
-                  borderRadius: BorderRadius.circular(10.0),
+                  borderRadius: BorderRadius.circular(22.0),
                   child: const Image(image: AssetImage('assets/img/about.jpg')),
                 )),
             const SizedBox(width: 16.0),
@@ -176,7 +176,7 @@ class AppTableLayout extends StatelessWidget {
                           ),
                         ),
                         Text(
-                          'Years\nexperience',
+                          'Anos de\nexperiência',
                           textAlign: TextAlign.center,
                           style: TextStyle(fontSize: 12.5),
                         ),

@@ -116,11 +116,8 @@ class _AppPortfolioPageState extends State<AppPortfolioPage> {
                   ),
                   SizedBox(
                     height: widget._mediaSize.height * .40,
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(10.0),
-                      child: const Image(
-                        image: AssetImage('assets/img/my-new-profile-photo-removebg-preview.png'),
-                      ),
+                    child: const Image(
+                      image: AssetImage('assets/img/my-new-profile-photo-removebg-preview.png'),
                     ),
                   ),
                 ]),
