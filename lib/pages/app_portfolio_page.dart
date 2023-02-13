@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_mobx/flutter_mobx.dart';
 
 import '../app_instances.dart';
 import '../widgets/app_carossel.dart';
@@ -26,166 +25,164 @@ class _AppPortfolioPageState extends State<AppPortfolioPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Observer(builder: (_) {
-      return SizedBox(
-        child: SingleChildScrollView(
-          child: Padding(
-            padding: EdgeInsets.only(top: widget._mediaSize.height * .15, bottom: 65),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                const Text('Portfolio',
-                    style: TextStyle(
-                      fontSize: 22,
-                      fontWeight: FontWeight.bold,
-                    )),
-                const SizedBox(height: 1.5),
-                const Text('Trabalhos mais recentes', style: TextStyle(fontSize: 12.5)),
-                const SizedBox(height: 50.0),
-                SizedBox(
-                  width: widget._mediaSize.width,
-                  height: widget._mediaSize.height * .55,
-                  child: Stack(
-                    children: [
-                      // the page view
-                      PageView(
-                        controller: _pageController,
-                        scrollDirection: Axis.horizontal,
-                        onPageChanged: (page) {
-                          AppInstances.instance.globalStore.page = page;
-                        },
-                        children: [
-                          CarrosselViewItem(mediaSize: widget._mediaSize, title: 'Website Moderno', description: 'Site adaptável a todos os dispositivos, com componentes de interface do usuário e interações animadas.', asset: _assetNames[0]),
-                          CarrosselViewItem(mediaSize: widget._mediaSize, title: 'Brand Design', description: 'Trabalhos criativos e inovadores de design de marca para clientes de todos os setores.', asset: _assetNames[1]),
-                          CarrosselViewItem(mediaSize: widget._mediaSize, title: 'Loja Virtual', description: 'Especializado em lojas virtuais. Possui experiência em criação de sites responsivos, integração com plataformas de e-commerce, entre outros.', asset: _assetNames[2]),
-                        ],
-                      ),
-                      Align(
-                          alignment: Alignment.centerLeft,
-                          child: IconButton(
-                            onPressed: () => _navigation(NavigationDirection.back, _pageController.page!.toInt(), controller: _pageController),
-                            icon: const Icon(Icons.chevron_left_rounded),
-                          )),
-                      Align(
-                          alignment: Alignment.centerRight,
-                          child: IconButton(
-                            onPressed: () => _navigation(NavigationDirection.forward, _pageController.page!.toInt(), controller: _pageController),
-                            icon: const Icon(Icons.chevron_right_rounded),
-                          )),
-                    ],
-                  ),
-                ),
-                const SizedBox(height: 10.0),
-                AppMarketPoints(controller: _pageController, storeController: AppInstances.instance.globalStore.page),
-                const SizedBox(height: 45.0),
-                Container(
-                  height: widget._mediaSize.height * .65,
-                  width: widget._mediaSize.width,
-                  color: const Color(0xFFE1C648),
-                  padding: const EdgeInsets.only(left: 22, top: 22, right: 22),
-                  child: Column(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                    Column(
-                      children: const [
-                        Text('Você tem um novo projeto', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: Colors.white)),
-                        Text(
-                          'Contacte-me agora e obtenha um desconto de 30% no seu novo projeto',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(color: Colors.white),
-                        ),
+    return SizedBox(
+      child: SingleChildScrollView(
+        child: Padding(
+          padding: EdgeInsets.only(top: widget._mediaSize.height * .15, bottom: 65),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Text('Portfolio',
+                  style: TextStyle(
+                    fontSize: 22,
+                    fontWeight: FontWeight.bold,
+                  )),
+              const SizedBox(height: 1.5),
+              const Text('Trabalhos mais recentes', style: TextStyle(fontSize: 12.5)),
+              const SizedBox(height: 50.0),
+              SizedBox(
+                width: widget._mediaSize.width,
+                height: widget._mediaSize.height * .55,
+                child: Stack(
+                  children: [
+                    // the page view
+                    PageView(
+                      controller: _pageController,
+                      scrollDirection: Axis.horizontal,
+                      onPageChanged: (page) {
+                        AppInstances.instance.globalStore.page = page;
+                      },
+                      children: [
+                        CarrosselViewItem(mediaSize: widget._mediaSize, title: 'Website Moderno', description: 'Site adaptável a todos os dispositivos, com componentes de interface do usuário e interações animadas.', asset: _assetNames[0]),
+                        CarrosselViewItem(mediaSize: widget._mediaSize, title: 'Brand Design', description: 'Trabalhos criativos e inovadores de design de marca para clientes de todos os setores.', asset: _assetNames[1]),
+                        CarrosselViewItem(mediaSize: widget._mediaSize, title: 'Loja Virtual', description: 'Especializado em lojas virtuais. Possui experiência em criação de sites responsivos, integração com plataformas de e-commerce, entre outros.', asset: _assetNames[2]),
                       ],
                     ),
-                    SizedBox(
-                      width: 150.0,
-                      child: FilledButton(
-                          style: ButtonStyle(
-                            backgroundColor: MaterialStateProperty.all(Colors.white),
-                            foregroundColor: MaterialStateProperty.all(const Color(0xFFE1C648)),
-                          ),
-                          onPressed: () {},
-                          child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: const [
-                            Text('Contate Me'),
-                            SizedBox(width: 8.0),
-                            Icon(Icons.send_rounded, color: Color(0xFFE1C648)),
-                          ])),
-                    ),
-                    SizedBox(
-                      height: widget._mediaSize.height * .40,
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(10.0),
-                        child: const Image(
-                          image: AssetImage('assets/img/my-new-profile-photo-removebg-preview.png'),
-                        ),
-                      ),
-                    ),
-                  ]),
+                    Align(
+                        alignment: Alignment.centerLeft,
+                        child: IconButton(
+                          onPressed: () => _navigation(NavigationDirection.back, _pageController.page!.toInt(), controller: _pageController),
+                          icon: const Icon(Icons.chevron_left_rounded),
+                        )),
+                    Align(
+                        alignment: Alignment.centerRight,
+                        child: IconButton(
+                          onPressed: () => _navigation(NavigationDirection.forward, _pageController.page!.toInt(), controller: _pageController),
+                          icon: const Icon(Icons.chevron_right_rounded),
+                        )),
+                  ],
                 ),
-                const SizedBox(height: 50.0),
-                const Text('Depoimento',
-                    style: TextStyle(
-                      fontSize: 22,
-                      fontWeight: FontWeight.bold,
-                    )),
-                const SizedBox(height: 1.5),
-                const Text('O que meus clientes dizem', style: TextStyle(fontSize: 12.5)),
-                const SizedBox(height: 50.0),
-                SizedBox(
-                  height: 170,
-                  width: widget._mediaSize.width,
-                  child: Stack(
-                    children: [
-                      // the page view
-                      SizedBox(
-                        width: widget._mediaSize.width,
-                        child: PageView(
-                          controller: _testimonialController,
-                          scrollDirection: Axis.horizontal,
-                          onPageChanged: (page) {
-                            AppInstances.instance.globalStore.testimonialPage = page;
-                          },
-                          children: [
-                            AppTestiomonialClient(
-                              mediaSize: widget._mediaSize,
-                              clientComentary: "Ouh! Eu amei o trabalho dele. Eu sou fã de cores, e... assim, eu amei a forma como ele usou o degrade no meu projeto. Simplesmente incrivel!",
-                              picture: 'assets/img/testimonial1.jpg',
-                              clientName: 'Sara Smith',
-                            ),
-                            AppTestiomonialClient(
-                              mediaSize: widget._mediaSize,
-                              clientComentary: "Tenho uma boa impressão, realizou meu projeto com toda a qualidade possível e atenção e suporte 24 horas por dia.",
-                              picture: 'assets/img/testimonial2.jpg',
-                              clientName: 'Keven Maidess',
-                            ),
-                            AppTestiomonialClient(
-                              mediaSize: widget._mediaSize,
-                              clientComentary: "Há há há... meu grande amigo. Depois de ter feito um projeto para mim, não desgrudo mais dele. O trabalho dele é simplesmente fantástico.",
-                              picture: 'assets/img/testimonial3.jpg',
-                              clientName: 'Gerson Savele',
-                            ),
-                          ],
-                        ),
+              ),
+              const SizedBox(height: 10.0),
+              AppMarketPoints(controller: _pageController, storeController: AppInstances.instance.globalStore.page),
+              const SizedBox(height: 45.0),
+              Container(
+                height: widget._mediaSize.height * .65,
+                width: widget._mediaSize.width,
+                color: const Color(0xFFE1C648),
+                padding: const EdgeInsets.only(left: 22, top: 22, right: 22),
+                child: Column(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+                  Column(
+                    children: const [
+                      Text('Você tem um novo projeto', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: Colors.white)),
+                      Text(
+                        'Contacte-me agora e obtenha um desconto de 30% no seu novo projeto',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(color: Colors.white),
                       ),
-                      Align(
-                          alignment: Alignment.centerLeft,
-                          child: IconButton(
-                            onPressed: () => _navigation(NavigationDirection.back, _testimonialController.page!.toInt(), controller: _testimonialController),
-                            icon: const Icon(Icons.chevron_left_rounded),
-                          )),
-                      Align(
-                          alignment: Alignment.centerRight,
-                          child: IconButton(
-                            onPressed: () => _navigation(NavigationDirection.forward, _testimonialController.page!.toInt(), controller: _testimonialController),
-                            icon: const Icon(Icons.chevron_right_rounded),
-                          )),
                     ],
                   ),
+                  SizedBox(
+                    width: 150.0,
+                    child: FilledButton(
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all(Colors.white),
+                          foregroundColor: MaterialStateProperty.all(const Color(0xFFE1C648)),
+                        ),
+                        onPressed: () {},
+                        child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: const [
+                          Text('Contate Me'),
+                          SizedBox(width: 8.0),
+                          Icon(Icons.send_rounded, color: Color(0xFFE1C648)),
+                        ])),
+                  ),
+                  SizedBox(
+                    height: widget._mediaSize.height * .40,
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(10.0),
+                      child: const Image(
+                        image: AssetImage('assets/img/my-new-profile-photo-removebg-preview.png'),
+                      ),
+                    ),
+                  ),
+                ]),
+              ),
+              const SizedBox(height: 50.0),
+              const Text('Depoimento',
+                  style: TextStyle(
+                    fontSize: 22,
+                    fontWeight: FontWeight.bold,
+                  )),
+              const SizedBox(height: 1.5),
+              const Text('O que meus clientes dizem', style: TextStyle(fontSize: 12.5)),
+              const SizedBox(height: 50.0),
+              SizedBox(
+                height: 170,
+                width: widget._mediaSize.width,
+                child: Stack(
+                  children: [
+                    // the page view
+                    SizedBox(
+                      width: widget._mediaSize.width,
+                      child: PageView(
+                        controller: _testimonialController,
+                        scrollDirection: Axis.horizontal,
+                        onPageChanged: (page) {
+                          AppInstances.instance.globalStore.testimonialPage = page;
+                        },
+                        children: [
+                          AppTestiomonialClient(
+                            mediaSize: widget._mediaSize,
+                            clientComentary: "Ouh! Eu amei o trabalho dele. Eu sou fã de cores, e... assim, eu amei a forma como ele usou o degrade no meu projeto. Simplesmente incrivel!",
+                            picture: 'assets/img/testimonial1.jpg',
+                            clientName: 'Sara Smith',
+                          ),
+                          AppTestiomonialClient(
+                            mediaSize: widget._mediaSize,
+                            clientComentary: "Tenho uma boa impressão, realizou meu projeto com toda a qualidade possível e atenção e suporte 24 horas por dia.",
+                            picture: 'assets/img/testimonial2.jpg',
+                            clientName: 'Keven Maidess',
+                          ),
+                          AppTestiomonialClient(
+                            mediaSize: widget._mediaSize,
+                            clientComentary: "Há há há... meu grande amigo. Depois de ter feito um projeto para mim, não desgrudo mais dele. O trabalho dele é simplesmente fantástico.",
+                            picture: 'assets/img/testimonial3.jpg',
+                            clientName: 'Gerson Savele',
+                          ),
+                        ],
+                      ),
+                    ),
+                    Align(
+                        alignment: Alignment.centerLeft,
+                        child: IconButton(
+                          onPressed: () => _navigation(NavigationDirection.back, _testimonialController.page!.toInt(), controller: _testimonialController),
+                          icon: const Icon(Icons.chevron_left_rounded),
+                        )),
+                    Align(
+                        alignment: Alignment.centerRight,
+                        child: IconButton(
+                          onPressed: () => _navigation(NavigationDirection.forward, _testimonialController.page!.toInt(), controller: _testimonialController),
+                          icon: const Icon(Icons.chevron_right_rounded),
+                        )),
+                  ],
                 ),
-                AppMarketPoints(controller: _testimonialController, storeController: AppInstances.instance.globalStore.testimonialPage),
-              ],
-            ),
+              ),
+              AppMarketPoints(controller: _testimonialController, storeController: AppInstances.instance.globalStore.testimonialPage),
+            ],
           ),
         ),
-      );
-    });
+      ),
+    );
   }
 
   void _navigation(NavigationDirection navdirection, int page, {required PageController controller}) {
@@ -222,6 +219,13 @@ class _AppPortfolioPageState extends State<AppPortfolioPage> {
     } else if (navdirection == NavigationDirection.especifify) {
       toWhere(page);
     }
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    _pageController.dispose();
+    _testimonialController.dispose();
   }
 }
 

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+// ignore: depend_on_referenced_packages
 import 'package:flutter_web_plugins/url_strategy.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'app_dashboard.dart';
@@ -28,8 +29,8 @@ class _MyAppState extends State<MyApp> {
       return MaterialApp(
         title: 'Portfolio',
         debugShowCheckedModeBanner: false,
-        theme: (AppInstances.instance.globalStore.darkModeActivated == false) ? ThemeData(useMaterial3: true, colorScheme: lightColorScheme) : null,
-        darkTheme: (AppInstances.instance.globalStore.darkModeActivated == true) ? ThemeData(useMaterial3: true, colorScheme: darkColorScheme) : null,
+        theme: AppInstances.instance.globalStore.darkModeActivated == false ? ThemeData(useMaterial3: true, colorScheme: lightColorScheme) : ThemeData(useMaterial3: true),
+        darkTheme: AppInstances.instance.globalStore.darkModeActivated == true ? ThemeData(useMaterial3: true, colorScheme: darkColorScheme) : ThemeData(useMaterial3: true),
         home: Scaffold(
           body: AppDashboard(title: title),
         ),

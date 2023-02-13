@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:portfolio/app_instances.dart';
 
-import 'app_alert_open_your_phone.dart';
 import 'pages/app_about_page.dart';
 import 'pages/app_portfolio_page.dart';
 import 'pages/app_services_page.dart';
