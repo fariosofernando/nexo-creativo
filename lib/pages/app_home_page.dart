@@ -170,19 +170,29 @@ class DesktopLayout extends StatelessWidget {
                 width: 50,
                 child: Column(
                   children: [
-                    IconButton(
-                      onPressed: () {},
-                      icon: const Icon(Icons.workspaces_outlined),
+                    AssetIconButton(
+                      touch: () {},
+                      darkAsset: 'assets/img/linkedin-icon-colored.svg',
+                      lightAsset: 'assets/img/linkedin-icon.svg',
                     ),
-                    // const SizedBox(width: 8.0),
-                    IconButton(
-                      onPressed: () {},
-                      icon: const Icon(Icons.language),
-                    ),
-
-                    IconButton(
-                      onPressed: () {},
-                      icon: const Icon(Icons.code),
+                    const SizedBox(height: 8.0),
+                    Observer(builder: (_) {
+                      return Container(
+                        height: 28,
+                        width: 28,
+                        alignment: Alignment.center,
+                        decoration: BoxDecoration(
+                          color: AppInstances.instance.globalStore.darkModeActivated ? const Color(0xFFE1C648) : const Color(0xFF1D1B16),
+                          borderRadius: BorderRadius.circular(18),
+                        ),
+                        child: Icon(Icons.language, color: AppInstances.instance.globalStore.darkModeActivated ? const Color(0xFF1D1B16) : const Color(0xFFFFFBFF)),
+                      );
+                    }),
+                    const SizedBox(height: 8.0),
+                    AssetIconButton(
+                      touch: () {},
+                      darkAsset: 'assets/img/github-icon-colored.svg',
+                      lightAsset: 'assets/img/github-icon.svg',
                     ),
                   ],
                 ),
