@@ -66,15 +66,20 @@ class AppCard extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 for (var serviceElement in servicesList)
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.start,
+                                  Column(
                                     children: [
-                                      Icon(
-                                        Icons.check_circle_outlined,
-                                        color: AppInstances.instance.globalStore.darkModeActivated ? const Color(0xFFE1C648) : const Color(0xFF6E5D00),
+                                      Row(
+                                        mainAxisAlignment: MainAxisAlignment.start,
+                                        children: [
+                                          Icon(
+                                            Icons.check_circle_outlined,
+                                            color: AppInstances.instance.globalStore.darkModeActivated ? const Color(0xFFE1C648) : const Color(0xFF6E5D00),
+                                          ),
+                                          const SizedBox(width: 8.0),
+                                          Text(serviceElement, style: const TextStyle(fontSize: 12.0)),
+                                        ],
                                       ),
-                                      const SizedBox(width: 8.0),
-                                      Text(serviceElement, style: const TextStyle(fontSize: 12.0)),
+                                      const SizedBox(height: 5.0),
                                     ],
                                   ),
                               ],

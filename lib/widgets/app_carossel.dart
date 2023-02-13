@@ -21,7 +21,7 @@ class CarrosselViewItem extends StatelessWidget {
           SizedBox(
             width: mediaSize.width * .70,
             child: ClipRRect(
-              borderRadius: BorderRadius.circular(10.0),
+              borderRadius: BorderRadius.circular(22.0),
               child: Image(
                 image: AssetImage(asset),
               ),

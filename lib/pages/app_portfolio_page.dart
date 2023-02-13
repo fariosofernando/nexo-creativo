@@ -57,9 +57,9 @@ class _AppPortfolioPageState extends State<AppPortfolioPage> {
                         AppInstances.instance.globalStore.page = page;
                       },
                       children: [
-                        CarrosselViewItem(mediaSize: widget._mediaSize, title: 'Website Moderno', description: 'Site adaptável a todos os dispositivos, com componentes de interface do usuário e interações animadas.', asset: _assetNames[0]),
+                        CarrosselViewItem(mediaSize: widget._mediaSize, title: 'Website Moderno', description: 'Sites adaptáveis a todos os dispositivos, com componentes de interface do usuário e interações animadas.', asset: _assetNames[0]),
                         CarrosselViewItem(mediaSize: widget._mediaSize, title: 'Brand Design', description: 'Trabalhos criativos e inovadores de design de marca para clientes de todos os setores.', asset: _assetNames[1]),
-                        CarrosselViewItem(mediaSize: widget._mediaSize, title: 'Loja Virtual', description: 'Especializado em lojas virtuais. Possui experiência em criação de sites responsivos, integração com plataformas de e-commerce, entre outros.', asset: _assetNames[2]),
+                        CarrosselViewItem(mediaSize: widget._mediaSize, title: 'Loja Virtual', description: 'Especializado em lojas virtuais. Eexperiência em criação de sites responsivos, integração com plataformas de e-commerce, entre outros.', asset: _assetNames[2]),
                       ],
                     ),
                     Align(
@@ -151,7 +151,7 @@ class _AppPortfolioPageState extends State<AppPortfolioPage> {
                         children: [
                           AppTestiomonialClient(
                             mediaSize: widget._mediaSize,
-                            clientComentary: "Ouh! Eu amei o trabalho dele. Eu sou fã de cores, e... assim, eu amei a forma como ele usou o degrade no meu projeto. Simplesmente incrivel!",
+                            clientComentary: "Ouh! Eu amei o trabalho dele. Eu sou fã de cores e... assim, eu amei a forma como ele usou o degrade no meu projeto. Simplesmente incrivel!",
                             picture: 'assets/img/testimonial1.jpg',
                             clientName: 'Sara Smith',
                           ),
@@ -277,7 +277,7 @@ class AppTestiomonialClient extends StatelessWidget {
                 ),
                 Row(
                   children: const [
-                    Text('   Client', style: TextStyle(fontSize: 12, color: Colors.grey)),
+                    Text('   Cliente', style: TextStyle(fontSize: 12, color: Colors.grey)),
                   ],
                 ),
               ]),

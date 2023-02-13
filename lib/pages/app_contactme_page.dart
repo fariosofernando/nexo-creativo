@@ -42,12 +42,12 @@ class _AppContactmePageState extends State<AppContactmePage> {
                           fontWeight: FontWeight.bold,
                         )),
                     const SizedBox(height: 1.5),
-                    const Text('Pegue um toque', style: TextStyle(fontSize: 12.5)),
+                    const Text('Dê-me um toque', style: TextStyle(fontSize: 12.5)),
                     const SizedBox(height: 50.0),
                     AppCantactMedDatas(
                       icon: Icon(Icons.call_outlined, color: _setColorIndicator()),
                       title: 'Ligue Me',
-                      subtitle: '877-134-964',
+                      subtitle: '877-134-964 | 851-708-491',
                     ),
                     AppCantactMedDatas(
                       icon: Icon(Icons.email_outlined, color: _setColorIndicator()),
@@ -65,6 +65,7 @@ class _AppContactmePageState extends State<AppContactmePage> {
                         border: OutlineInputBorder(),
                         hintText: 'Nome',
                       ),
+                      keyboardType: TextInputType.name,
                     ),
                     const SizedBox(height: 22),
                     const TextField(
@@ -72,6 +73,7 @@ class _AppContactmePageState extends State<AppContactmePage> {
                         border: OutlineInputBorder(),
                         hintText: 'Email',
                       ),
+                      keyboardType: TextInputType.emailAddress,
                     ),
                     const SizedBox(height: 22),
                     const TextField(
@@ -79,6 +81,7 @@ class _AppContactmePageState extends State<AppContactmePage> {
                         border: OutlineInputBorder(),
                         hintText: 'Seu projeto',
                       ),
+                      keyboardType: TextInputType.text,
                     ),
                     const SizedBox(height: 22),
                     const TextField(
@@ -87,6 +90,7 @@ class _AppContactmePageState extends State<AppContactmePage> {
                         border: OutlineInputBorder(),
                         hintText: 'Descreva para mim o seu projeto',
                       ),
+                      keyboardType: TextInputType.text,
                     ),
                     const SizedBox(height: 22),
                     Row(
@@ -127,7 +131,7 @@ class _AppContactmePageState extends State<AppContactmePage> {
                     // const Text('Portfolio', style: TextStyle(fontWeight: FontWeight.normal)),
                     // const Text('Contactme', style: TextStyle(fontWeight: FontWeight.normal)),
                     Row(mainAxisAlignment: MainAxisAlignment.center, children: const [
-                      Text('@ Nexu Creativo. Todos os direitos reservados', style: TextStyle(fontWeight: FontWeight.normal, fontSize: 12.5)),
+                      Text('@Nexu Creativo. Todos os direitos reservados', style: TextStyle(fontWeight: FontWeight.normal, fontSize: 12.5)),
                     ]),
                   ],
                 ),

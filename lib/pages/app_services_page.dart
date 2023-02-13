@@ -34,21 +34,21 @@ class _AppServicesPageState extends State<AppServicesPage> {
               AppCard(
                 service: 'Ui/Ux\nDesigner',
                 icon: Icon(Icons.space_dashboard_outlined),
-                serviceName: 'Ui/Ux design',
+                serviceName: 'Ui/Ux designer',
                 servicesList: [
-                  'Eu desenvolvo a interface do usuário',
-                  'Eu crio interações de elemento ux',
+                  'Desenvolvo interfaces do usuário',
+                  'Crio interações de elementos Ux',
                   'Posiciono a marca da sua empresa',
                 ],
               ),
               AppCard(
                 service: 'Software\nDeveloper',
                 icon: Icon(Icons.code_rounded),
-                serviceName: 'Frontend developer',
+                serviceName: 'Software developer',
                 servicesList: [
-                  'Desenvolvimento de página da Web',
-                  'Desenvolvimento de aplicativo mobile',
-                  'Desenvolvimento de aplicativo desktop',
+                  'Desenvolvo aplicativos Web',
+                  'Desenvolvo aplicativos Mobile',
+                  'Desenvolvo aplicativos Desktop',
                 ],
               ),
               AppCard(
@@ -60,6 +60,7 @@ class _AppServicesPageState extends State<AppServicesPage> {
                   'Desenvolvo sua identidade visual',
                 ],
               ),
+              SizedBox(height: 70.0),
             ],
           ),
         ),
