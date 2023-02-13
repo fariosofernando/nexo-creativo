@@ -134,6 +134,11 @@ class _AppSkillsPageState extends State<AppSkillsPage> {
                     percentageInString: '98',
                   ),
                   AppSkillItem(
+                    skill: 'Gimp',
+                    percentage: 0.75,
+                    percentageInString: '75',
+                  ),
+                  AppSkillItem(
                     skill: 'Photoshop',
                     percentage: 0.55,
                     percentageInString: '55',
