@@ -92,11 +92,11 @@ class _AppContactmePageState extends State<AppContactmePage> {
                     Row(
                       children: [
                         SizedBox(
-                          width: 165.0,
+                          width: 180.0,
                           child: FilledButton(
                               onPressed: () {},
                               child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: const [
-                                Text('Send Message'),
+                                Text('Enviar mensagem'),
                                 SizedBox(width: 8.0),
                                 Icon(Icons.send_rounded),
                               ])),

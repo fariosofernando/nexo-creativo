@@ -12,9 +12,12 @@ class AppHomePage extends StatefulWidget {
   const AppHomePage({
     super.key,
     required Size mediaSize,
-  }) : _mediaSize = mediaSize;
+    required PageController rootPageController,
+  })  : _mediaSize = mediaSize,
+        _rootPageController = rootPageController;
 
   final Size _mediaSize;
+  final PageController _rootPageController;
 
   @override
   State<AppHomePage> createState() => _AppHomePageState();
@@ -25,7 +28,7 @@ class _AppHomePageState extends State<AppHomePage> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      child: (widget._mediaSize.width >= 800) ? DesktopLayout(mediaSize: widget._mediaSize) : PhoneLayout(mediaSize: widget._mediaSize),
+      child: (widget._mediaSize.width >= 800) ? DesktopLayout(mediaSize: widget._mediaSize, rootPageController: widget._rootPageController) : PhoneLayout(mediaSize: widget._mediaSize, rootPageController: widget._rootPageController),
     );
   }
 }
@@ -34,9 +37,12 @@ class PhoneLayout extends StatelessWidget {
   const PhoneLayout({
     super.key,
     required Size mediaSize,
-  }) : _mediaSize = mediaSize;
+    required PageController rootPageController,
+  })  : _mediaSize = mediaSize,
+        _rootPageController = rootPageController;
 
   final Size _mediaSize;
+  final PageController _rootPageController;
 
   @override
   Widget build(BuildContext context) {
@@ -122,7 +128,9 @@ class PhoneLayout extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(left: 22, right: 22),
               child: FilledButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    _rootPageController.animateToPage(5, duration: const Duration(milliseconds: 1200), curve: Curves.ease);
+                  },
                   child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: const [
                     Text('Contate Me'),
                     SizedBox(width: 8.0),
@@ -140,9 +148,12 @@ class DesktopLayout extends StatelessWidget {
   const DesktopLayout({
     super.key,
     required Size mediaSize,
-  }) : _mediaSize = mediaSize;
+    required PageController rootPageController,
+  })  : _mediaSize = mediaSize,
+        _rootPageController = rootPageController;
 
   final Size _mediaSize;
+  final PageController _rootPageController;
 
   @override
   Widget build(BuildContext context) {

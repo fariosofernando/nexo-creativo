@@ -12,9 +12,12 @@ class AppPortfolioPage extends StatefulWidget {
   const AppPortfolioPage({
     super.key,
     required Size mediaSize,
-  }) : _mediaSize = mediaSize;
+    required PageController rootPageController,
+  })  : _mediaSize = mediaSize,
+        _rootPageController = rootPageController;
 
   final Size _mediaSize;
+  final PageController _rootPageController;
 
   @override
   State<AppPortfolioPage> createState() => _AppPortfolioPageState();
@@ -102,7 +105,9 @@ class _AppPortfolioPageState extends State<AppPortfolioPage> {
                           backgroundColor: MaterialStateProperty.all(Colors.white),
                           foregroundColor: MaterialStateProperty.all(const Color(0xFFE1C648)),
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          widget._rootPageController.animateToPage(5, duration: const Duration(milliseconds: 1200), curve: Curves.ease);
+                        },
                         child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: const [
                           Text('Contate Me'),
                           SizedBox(width: 8.0),

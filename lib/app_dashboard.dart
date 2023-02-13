@@ -41,11 +41,13 @@ class _AppDashboardState extends State<AppDashboard> {
                 ? [
                     AppHomePage(
                       mediaSize: mediaSize,
+                      rootPageController: _pageController,
                     ),
                   ]
                 : [
                     AppHomePage(
                       mediaSize: mediaSize,
+                      rootPageController: _pageController,
                     ),
                     AppAboutPage(
                       mediaSize: mediaSize,
@@ -58,6 +60,7 @@ class _AppDashboardState extends State<AppDashboard> {
                     ),
                     AppPortfolioPage(
                       mediaSize: mediaSize,
+                      rootPageController: _pageController,
                     ),
                     AppContactmePage(
                       mediaSize: mediaSize,
