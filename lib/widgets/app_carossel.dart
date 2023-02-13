@@ -42,7 +42,7 @@ class CarrosselViewItem extends StatelessWidget {
           const SizedBox(height: 8.0),
           Padding(
             padding: const EdgeInsets.only(left: 50, right: 50),
-            child: Text(description),
+            child: Text(description, style: const TextStyle(fontSize: 13)),
           ),
           const SizedBox(height: 8.0),
           Padding(

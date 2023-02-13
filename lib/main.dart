@@ -30,7 +30,7 @@ class _MyAppState extends State<MyApp> {
         title: 'Portfolio',
         debugShowCheckedModeBanner: false,
         theme: AppInstances.instance.globalStore.darkModeActivated == false ? ThemeData(useMaterial3: true, colorScheme: lightColorScheme) : ThemeData(useMaterial3: true),
-        darkTheme: AppInstances.instance.globalStore.darkModeActivated == true ? ThemeData(useMaterial3: true, colorScheme: darkColorScheme) : ThemeData(useMaterial3: true),
+        darkTheme: AppInstances.instance.globalStore.darkModeActivated == true ? ThemeData(useMaterial3: true, colorScheme: darkColorScheme) : null,
         home: Scaffold(
           body: AppDashboard(title: title),
         ),

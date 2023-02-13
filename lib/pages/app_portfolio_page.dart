@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_mobx/flutter_mobx.dart';
 
 import '../app_instances.dart';
+import '../models/app_page_direction.dart';
 import '../widgets/app_carossel.dart';
+import '../widgets/app_page_pointers.dart';
 
 const List<String> _assetNames = <String>["assets/img/portfolio1.jpg", "assets/img/portfolio2.jpg", "assets/img/portfolio3.jpg"];
-
-enum NavigationDirection { forward, back, especifify }
 
 class AppPortfolioPage extends StatefulWidget {
   const AppPortfolioPage({
@@ -74,7 +75,9 @@ class _AppPortfolioPageState extends State<AppPortfolioPage> {
                 ),
               ),
               const SizedBox(height: 10.0),
-              AppMarketPoints(controller: _pageController, storeController: AppInstances.instance.globalStore.page),
+              Observer(builder: (_) {
+                return AppMarketPoints(controller: _pageController, storeController: AppInstances.instance.globalStore.page);
+              }),
               const SizedBox(height: 45.0),
               Container(
                 height: widget._mediaSize.height * .65,
@@ -177,7 +180,9 @@ class _AppPortfolioPageState extends State<AppPortfolioPage> {
                   ],
                 ),
               ),
-              AppMarketPoints(controller: _testimonialController, storeController: AppInstances.instance.globalStore.testimonialPage),
+              Observer(builder: (_) {
+                return AppMarketPoints(controller: _testimonialController, storeController: AppInstances.instance.globalStore.testimonialPage);
+              }),
             ],
           ),
         ),
@@ -244,7 +249,7 @@ class AppTestiomonialClient extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-        padding: const EdgeInsets.only(left: 35, right: 15),
+        padding: const EdgeInsets.only(left: 35, right: 35),
         child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
           Row(
             children: [
@@ -254,7 +259,7 @@ class AppTestiomonialClient extends StatelessWidget {
               ),
               Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                 SizedBox(
-                  width: _mediaSize.width - 100,
+                  width: _mediaSize.width - 120,
                   child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
                     Text('   $clientName', style: const TextStyle(fontWeight: FontWeight.bold)),
                     SizedBox(
@@ -280,106 +285,5 @@ class AppTestiomonialClient extends StatelessWidget {
           ),
           const SizedBox(height: 25.0),
         ]));
-  }
-}
-
-class AppMarketPoints extends StatelessWidget {
-  final PageController controller;
-
-  final num storeController;
-
-  const AppMarketPoints({super.key, required this.controller, required this.storeController});
-
-  final double _switchUniSize = 8.0;
-
-  final double _switchUniBorder = 16.0;
-
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      width: 45.0,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          GestureDetector(
-            onTap: () => _navigation(NavigationDirection.especifify, 0, controller: controller),
-            child: Container(
-              height: _switchUniSize,
-              width: _switchUniSize,
-              decoration: BoxDecoration(
-                color: _setColorIndicator(0.0, storeController: storeController),
-                borderRadius: BorderRadius.circular(_switchUniBorder),
-              ),
-            ),
-          ),
-          GestureDetector(
-            onTap: () => _navigation(NavigationDirection.especifify, 1, controller: controller),
-            child: Container(
-              height: _switchUniSize,
-              width: _switchUniSize,
-              decoration: BoxDecoration(
-                color: _setColorIndicator(1.0, storeController: storeController),
-                borderRadius: BorderRadius.circular(_switchUniBorder),
-              ),
-            ),
-          ),
-          GestureDetector(
-            onTap: () => _navigation(NavigationDirection.especifify, 2, controller: controller),
-            child: Container(
-              height: _switchUniSize,
-              width: _switchUniSize,
-              decoration: BoxDecoration(
-                color: _setColorIndicator(2.0, storeController: storeController),
-                borderRadius: BorderRadius.circular(_switchUniBorder),
-              ),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-
-  Color _setColorIndicator(num page, {required num storeController}) {
-    if (storeController == page) {
-      return AppInstances.instance.globalStore.darkModeActivated ? const Color(0xFFE1C648) : const Color(0xFF6E5D00);
-    } else {
-      return AppInstances.instance.globalStore.darkModeActivated ? const Color(0xFF6E5D00) : Colors.grey;
-    }
-  }
-
-  void _navigation(NavigationDirection navdirection, int page, {required PageController controller}) {
-    void navigationForward(int page) {
-      void go(int to) => controller.animateToPage(to, duration: const Duration(milliseconds: 1200), curve: Curves.ease);
-      if (page == 0) {
-        go(1);
-      } else if (page == 1) {
-        go(2);
-      } else if (page == 2) {
-        go(0);
-      }
-    }
-
-    void navigationBack(int page) {
-      void go(int to) => controller.animateToPage(to, duration: const Duration(milliseconds: 1200), curve: Curves.ease);
-      if (page == 2) {
-        go(1);
-      } else if (page == 1) {
-        go(0);
-      } else if (page == 0) {
-        go(2);
-      }
-    }
-
-    void toWhere(int page) {
-      controller.animateToPage(page, duration: const Duration(milliseconds: 1200), curve: Curves.ease);
-    }
-
-    if (navdirection == NavigationDirection.forward) {
-      navigationForward(page);
-    } else if (navdirection == NavigationDirection.back) {
-      navigationBack(page);
-    } else if (navdirection == NavigationDirection.especifify) {
-      toWhere(page);
-    }
   }
 }
