@@ -216,7 +216,7 @@ class DesktopLayout extends StatelessWidget {
                           )),
                       const SizedBox(height: 8.0),
                       const Text(
-                        'Experiência de alto nível em Ui/Ux design e conhecimento\n em desenvolvimento de software, produzindo\ntrabalhos de qualidade.',
+                        'Experiência de alto nível em desenvolvimento de software\ne no conhecimento em Ui/Ux design, produzindo\ntrabalhos de qualidade.',
                         style: TextStyle(fontSize: 12.5),
                       ),
                       const SizedBox(height: 22.0),
