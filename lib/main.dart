@@ -19,7 +19,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  final String title = 'My Portifolio Dashboard Page';
+  final String title = 'Nexu Creativo Dashboard Page';
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,7 @@ class _MyAppState extends State<MyApp> {
 
     return Observer(builder: (_) {
       return MaterialApp(
-        title: 'Portfolio',
+        title: 'Nexu Creativo',
         debugShowCheckedModeBanner: false,
         theme: AppInstances.instance.globalStore.darkModeActivated == false ? ThemeData(useMaterial3: true, colorScheme: lightColorScheme) : ThemeData(useMaterial3: true),
         darkTheme: AppInstances.instance.globalStore.darkModeActivated == true ? ThemeData(useMaterial3: true, colorScheme: darkColorScheme) : null,
