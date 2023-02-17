@@ -29,8 +29,9 @@ class _MyAppState extends State<MyApp> {
       return MaterialApp(
         title: 'Nexu Creativo',
         debugShowCheckedModeBanner: false,
-        theme: AppInstances.instance.globalStore.darkModeActivated == false ? ThemeData(useMaterial3: true, colorScheme: lightColorScheme) : ThemeData(useMaterial3: true),
-        darkTheme: AppInstances.instance.globalStore.darkModeActivated == true ? ThemeData(useMaterial3: true, colorScheme: darkColorScheme) : null,
+        theme: ThemeData(useMaterial3: true, colorScheme: lightColorScheme),
+        darkTheme: ThemeData(useMaterial3: true, colorScheme: darkColorScheme),
+        themeMode: AppInstances.instance.globalStore.darkModeActivated ? ThemeMode.dark : ThemeMode.light,
         home: Scaffold(
           body: AppDashboard(title: title),
         ),
